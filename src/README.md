@@ -19,10 +19,9 @@ The goal of this book is to provide a comprehensive guide on how to use
 
 **NO**
 
-`artemis` is a new forensic tool written from scratch and is currently developed
-during my spare time. It has not been tested in any real production environment.
-It does however have extensive tests (over 700!) and has been carefully
-developed to make sure the data it produces is accurate.
+`artemis` is a new forensic tool written from scratch and it has not been tested
+in any production environment. It does however have an extensive test suite and
+has been carefully developed to make sure the data it produces is accurate.
 
 If you are looking for a free and open-source forensic tool to lead an
 investigation, two (2) great options are:
