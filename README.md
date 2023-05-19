@@ -5,7 +5,7 @@ This repo contains the markdown files related to documentation for
 [mdbook](https://github.com/rust-lang/mdBook) is used to generate and build the
 documentation.
 
-Online documentation can be found at [TODO]()
+Online documentation can be found at https://puffycid.github.io/artemis-book
 
 ## Questions or Issues
 
