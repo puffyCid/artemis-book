@@ -12,8 +12,8 @@ The `TypeScript` code below imports a function and the `Registry` interface from
 `artemis`.
 
 ```typescript
-import { getRegistry } from "https://github.com/puffycid/artemis-api/mod.ts";
-import { Registry } from "https://github.com/puffycid/artemis-api/src/windows/registry.ts";
+import { getRegistry } from "https://raw.githubusercontent.com/puffycid/artemis-api/master/mod.ts";
+import { Registry } from "https://raw.githubusercontent.com/puffycid/artemis-api/master/src/windows/registry.ts";
 
 interface InstalledPrograms {
   name: string;
@@ -256,14 +256,14 @@ files into one `.js` file using esbuild. We then execute this code using
 ### Output
 
 ```javascript
-// https://github.com/puffycid/artemis-api/src/windows/registry.ts
+// https://raw.githubusercontent.com/puffycid/artemis-api/master/src/windows/registry.ts
 function get_registry(path) {
   const data = Deno[Deno.internal].core.ops.get_registry(path);
   const reg_array = JSON.parse(data);
   return reg_array;
 }
 
-// https://github.com/puffycid/artemis-api/mod.ts
+// https://raw.githubusercontent.com/puffycid/artemis-api/master/mod.ts
 function getRegistry(path) {
   return get_registry(path);
 }

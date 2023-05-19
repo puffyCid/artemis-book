@@ -22,23 +22,23 @@ function associated with the artifact you want to parse. For example, to parse
 the Windows `Registry` you would import:
 
 ```typescript
-import { getRegistry } from "https://github.com/puffycid/artemis-api/mod.ts";
+import { getRegistry } from "https://raw.githubusercontent.com/puffycid/artemis-api/master/mod.ts";
 ```
 
 If you wanted to parse the Windows `Registry` and manipulate the parsed data you
 would import:
 
 ```typescript
-import { getRegistry } from "https://github.com/puffycid/artemis-api/mod.ts";
-import { Registry } from "https://github.com/puffycid/artemis-api/src/windows/registry.ts";
+import { getRegistry } from "https://raw.githubusercontent.com/puffycid/artemis-api/master/mod.ts";
+import { Registry } from "https://raw.githubusercontent.com/puffycid/artemis-api/master/src/windows/registry.ts";
 ```
 
 A list of all exported `artemis` functions can be found at
-`https://github.com/puffycid/artemis-api/mod.ts`. All artifacts supported by
-`artemis` are callable from `TypeScript`. The structured output produced by each
-`artifact` is listed in the respective `artifact` chapter. For example, the
-structured `Registry` data format return `getRegistry` is found in the
-[Registry chapter](../artifacts/windows/registry.md)
+`https://raw.githubusercontent.com/puffycid/artemis-api/master/mod.ts`. All
+artifacts supported by `artemis` are callable from `TypeScript`. The structured
+output produced by each `artifact` is listed in the respective `artifact`
+chapter. For example, the structured `Registry` data format return `getRegistry`
+is found in the [Registry chapter](../artifacts/windows/registry.md)
 
 Once we have created and bundled our script. We just need to base64 encode
 before providing it to `artemis`.
