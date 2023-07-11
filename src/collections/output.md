@@ -112,23 +112,7 @@ The `jsonl` output is identical to `json` with the following differences:
 This data would be saved in a `<uuid>.jsonl` file
 
 The `<uuid>.log` output from a collection contains any errors or warnings
-encountered during the collection. A possible example from the macOS
-`UnifiedLogs` would look like the following:
-
-```log
-03:23:48 [WARN] [macos-unifiedlogs] Unknown getaddrinfo options: 0
-03:23:48 [WARN] [macos-unifiedlogs] Unknown getaddrinfo options: 0
-03:23:48 [WARN] [macos-unifiedlogs] Unknown getaddrinfo options: 0
-03:23:48 [WARN] [macos-unifiedlogs] Unknown getaddrinfo options: 0
-03:24:20 [WARN] [macos-unifiedlogs] Unknown log activity type: 115 -  8 bytes left
-03:24:21 [ERROR] [macos-unifiedlogs] Parsed unknown log firehose data: Firehose { unknown_log_activity_type: 115, unknown_log_type: 92, flags: 0, format_string_location: 0, thread_id: 3940718410446741, continous_time_delta: 123602255, continous_time_delta_upper: 19, data_size: 0, firehose_activity: FirehoseActivity { unknown_activity_id: 0, unknown_sentinal: 0, pid: 0, unknown_activity_id_2: 0, unknown_sentinal_2: 0, unknown_activity_id_3: 0, unknown_sentinal_3: 0, unknown_message_string_ref: 0, unknown_pc_id: 0, firehose_formatters: FirehoseFormatters { main_exe: false, shared_cache: false, has_large_offset: 0, large_shared_cache: 0, absolute: false, uuid_relative: "", main_plugin: false, pc_style: false, main_exe_alt_index: 0 } }, firehose_non_activity: FirehoseNonActivity { unknown_activity_id: 0, unknown_sentinal: 0, private_strings_offset: 0, private_strings_size: 0, unknown_message_string_ref: 0, subsystem_value: 0, ttl_value: 0, data_ref_value: 0, unknown_pc_id: 0, firehose_formatters: FirehoseFormatters { main_exe: false, shared_cache: false, has_large_offset: 0, large_shared_cache: 0, absolute: false, uuid_relative: "", main_plugin: false, pc_style: false, main_exe_alt_index: 0 } }, firehose_loss: FirehoseLoss { start_time: 0, end_time: 0, count: 0 }, firehose_signpost: FirehoseSignpost { unknown_pc_id: 0, unknown_activity_id: 0, unknown_sentinel: 0, subsystem: 0, signpost_id: 0, signpost_name: 0, private_strings_offset: 0, private_strings_size: 0, ttl_value: 0, data_ref_value: 0, firehose_formatters: FirehoseFormatters { main_exe: false, shared_cache: false, has_large_offset: 0, large_shared_cache: 0, absolute: false, uuid_relative: "", main_plugin: false, pc_style: false, main_exe_alt_index: 0 } }, firehose_trace: FirehoseTrace { unknown_pc_id: 0, message_value: 0, unknown_data: [] }, unknown_item: 0, number_items: 0, message: FirehoseItemData { item_info: [], backtrace_strings: [] } }
-```
-
-The warnings above occured due to an unknown `getaddrinfo` option found in the
-log. The single error above occurred because the log had leftover remnant data
-at the end. This can happen when incomplete data is logged to the `UnifiedLogs`
-(ex: sudden system reboot or crash). If you have any questions about warnings or
-errors please open an issue.
+encountered during the collection. 
 
 The `status.log` output from a collection maps the `<uuuid>.{json or jsonl}` to
 an artifact name. A possible example from the macOS `UnifiedLogs`

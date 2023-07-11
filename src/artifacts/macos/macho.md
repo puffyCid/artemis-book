@@ -1,6 +1,6 @@
 # Macho
 
-macOS Macho object (`macho`) is the executable format for applications on macOS.
+macOS Mach object (`macho`) is the executable format for applications on macOS.
 `artemis` is able to parse basic metadata from `macho` files.
 
 Other Parsers:

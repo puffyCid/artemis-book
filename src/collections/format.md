@@ -15,6 +15,7 @@ collection_id = 1
 output = "local"
 filter_name = ""
 filter_script = ""
+logging = "warn"
 
 [[artifacts]]
 artifact_name = "amcache"
@@ -46,6 +47,9 @@ filter = true
     results of each `[[artifacts]]` entry into a script. See
     [scripting](../scripting/deno.md) section for detailed overview of this
     option.
+  - `logging` Set the logging level for artemis. This is **optional** by default
+    `artemis` will log errors and warnings. Valid options are:
+    `warn, error, debug, or info`
 - `[[artifacts]]` A list of artifacts to collect
   - `artifact_name` Name of aritfact
   - `filter` Whether to filter the artifact data through the `filter_script`.

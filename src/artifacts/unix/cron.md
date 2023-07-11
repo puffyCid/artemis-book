@@ -16,7 +16,7 @@ Refernces:
 # TOML Collection
 
 ```toml
-system = "macos"
+system = "macos" # or "linux"
 
 [output]
 name = "cron_collection"

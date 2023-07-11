@@ -26,7 +26,7 @@ References:
 # TOML Collection
 
 ```toml
-system = "macos"
+system = "macos" # or "linux"
 
 [output]
 name = "shellhistory_collection"
