@@ -13,6 +13,8 @@ compress = false
 endpoint_id = "6c51b123-1522-4572-9f2a-0bd5abd81b82"
 collection_id = 1
 output = "local"
+url = ""
+api_key = ""
 filter_name = ""
 filter_script = ""
 logging = "warn"
@@ -39,7 +41,11 @@ filter = true
   - `endpoint_id` An ID assigned to the endpoint. This can be any string value
   - `collection_id` A number assigned to the collection. This can be any postive
     number
-  - `output` The output type. Currently only supports `local` output
+  - `output` The output type. Supports: `local, gcp, aws, or azure`
+  - `url` The URL associated with either `gcp, aws, or azure`. This is required
+    only if using **remote upload** output
+  - `api_key` The API key associated with either `gcp, aws, or azure`. This is
+    required only if using **remote upload** output
   - `filter_name` The name of the provided `filter_script`. This is **optional**
     but if you are using a `filter_script` you should provide a name. Otherwise
     the default name `UnknownFilterName` is used
