@@ -37,10 +37,10 @@ artifact_name = "shimcache"
 
 # WARNING
 
-Currently `artemis` does not use encryption to protect the remote API key. Make
-sure the account associated with the API has only permissions needed by
-`artemis`. The only permission(s) `artemis` requires is the ability create/write
-data to a bucket.\
+Currently `artemis` does not securely protect the remote API key. Make sure the
+account associated with the API has only permissions needed by `artemis`. The
+only permission(s) `artemis` requires is the ability create/write data to a
+bucket.\
 In addition, make sure the account only has access to a dedicated bucket for
 `artemis`.\
 For example:
@@ -53,9 +53,6 @@ For example:
 If you do not want to expose the remote API key, you can output the data to a
 local directory, network share, or external drive. Then upload the data using an
 alternative tool.
-
-A future release of `artemis` will likely include encryption to protect the
-remote API key.
 
 # GCP
 
