@@ -45,10 +45,14 @@ artifact.
 # Timestamps
 
 All timestamps `artemis` outputs are in UNIXEPOCH seconds. The only exceptions
-are `UnifiedLogs` and `EventLogs`, both use UNIXEPOCH nanoseconds. If your new
-artifact has a timestamp, you will need to make sure the timestamp is in
-UNIXEPOCH seconds. Though exceptions may be allowed if needed, these exceptions
-will only be for the duration (ex: seconds vs nanoseconds).\
+are:
+
+- `UnifiedLogs` and `EventLogs` use UNIXEPOCH nanoseconds.
+- `Journals` use UNIXEPOCH microseconds.
+
+If your new artifact has a timestamp, you will need to make sure the timestamp
+is in UNIXEPOCH seconds. Though exceptions may be allowed if needed, these
+exceptions will only be for the duration (ex: seconds vs nanoseconds).\
 No other time formats such as Windows FILETIME, FATTIME, Chromium time, etc are
 allowed.
 

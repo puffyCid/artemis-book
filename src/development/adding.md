@@ -10,7 +10,7 @@ of adding a new feature:
 3. Work on said feature
 4. Ensure tests are made for all functions
 5. If you are adding a new artifact, add an integration test
-6. Run `cargo clippy`. Make sure any warnings are fixed.
+6. Run `cargo clippy`.
 7. Run `cargo fmt`
 8. Open a pull request!
 
