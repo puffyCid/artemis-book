@@ -1,13 +1,14 @@
 # Introduction
 
 **Artemis** is a powerful command line digital forensic and incident response
-(DFIR) tool that collects forensic data from Windows and macOS endpoints. Its
-primary focus is: speed, ease of use, and low resource usage.\
+(DFIR) tool that collects forensic data from Windows, macOS, and Linux
+endpoints. Its primary focus is: speed, ease of use, and low resource usage.\
 Notable features _so far_:
 
 - Setup collections using basic TOML files
 - Parsing support for large amount of forensic artifacts (25+)
-- Output to JSON or JSONL file(s) (remote uploading support coming soon)
+- Output to JSON or JSONL file(s)
+- Can output results to local system or upload to cloud services.
 - Embedded JavaScript runtime via [Deno](https://deno.land/)
 - Can be used as a library via [artemis-core](./core/overview.md)
 - MIT license
@@ -41,9 +42,10 @@ Over time as `artemis` matures, bugs are found and fixed, and feeback is given
 this statement will be updated when `artemis` ready to lead real world
 investigations.
 
-# `artemis` vs `artemis-core`
+# artemis vs artemis-core
 
-`artemis` is an executable that can be executed on Windows or macOS systems.\
+`artemis` is an executable that can be executed on Windows, macOS, or Linux
+systems.\
 `artemis-core` is a library that can be imported to an application to parse
 forensic data. `artemis` imports the `artemis-core` library to perform all of
 its forensic parsing.
@@ -58,5 +60,7 @@ guide prior to starting.
 
 # License
 
-`artemis`, `artemis-core`, example scripts, and this book are released under the
-MIT License
+[artemis](https://github.com/puffycid/artemis),
+[artemis-api](https://github.com/puffycid/artemis-api),
+[artemis-scripts](https://github.com/puffycid/artemis-scripts), and this book
+are released under the MIT License

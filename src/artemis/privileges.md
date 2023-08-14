@@ -1,9 +1,4 @@
-# User privileges vs (Root or Administrator) privileges
-
-_Hopefully_ you noticed that the instructions in the [CLI](cli.md) page
-explictly said to run `artemis` with elevated privileges
-
-## Why does `artemis` need elevated privileges?
+## Why does artemis need elevated privileges?
 
 The goal for `artemis` is to parse endpoint forensic artifacts. Many of these
 artifacts can only be accessed with elevated privileges. If you try running

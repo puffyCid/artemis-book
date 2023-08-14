@@ -4,8 +4,8 @@
 
 A really cool capability of `artemis` is it contains an embedded `JavaScript`
 runtime via [Deno](https://deno.land/). Deno is V8 based `JavaScript` runtime
-written in Rust. By importing the `deno_core` crates this allows us to create
-our own `JavaScript` runtime geared specifically for forensics and IR!
+written in Rust. By importing the `deno_core` crate this allows us to create our
+own `JavaScript` runtime geared specifically for forensics and IR!
 
 For example, the Rust `artemis` function `get_registry(registry_file_path)` can
 be used to parse a provided `Registry` file on disk. By registering this

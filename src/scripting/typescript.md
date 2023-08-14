@@ -1,9 +1,7 @@
 # Why TypeScript?
 
 A `TypeScript` library is provided instead of `JavaScript` due to the enhanced
-features and ease of use `TypeScript` provides over plain `JavaScript`. There
-are multiple online resources that provide additional information about the
-benefits of `TypeScript`.
+features and ease of use `TypeScript` provides over plain `JavaScript`.
 
 Continuing from `get_registry(registry_file_path)` example:
 
@@ -60,7 +58,7 @@ export interface Value {
  */
 export function get_registry(path: string): Registry[] {
   // Array of JSON objects
-  const data = Deno[Deno.internal].core.ops.get_registry(path);
+  const data = Deno.core.ops.get_registry(path);
   const reg_array: Registry[] = JSON.parse(data);
 
   return reg_array;
@@ -73,7 +71,7 @@ To make scripting even easier a simple `artemis-api` library is available to
 import into Deno scripts. This allows users to create scripts without needing to
 know what functions are registered.
 
-The example script below shows `TypeScript` code that imports the `artemis`
+The example script below shows `TypeScript` code that imports the `artemis-api`
 library to parse the `SOFTWARE` `Registry` file to get a list of installed
 programs
 
