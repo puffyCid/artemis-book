@@ -1,13 +1,23 @@
 # Limitations
 
-There are currently some limitations to scripting with `artemis` and Deno.
+It is important to understand the JavaScript runtime for `artemis` is **not**
+like normal JavaScript runtimes like `nodejs`, `deno`, `bun`, etc. These
+runtimes are primarily designed to create web apps.
 
-1. All scripts executed through `artemis` must by synchronous. Async scripts are
-   **not** supported.
-2. All scripts executed through `artemis` must be in `JavaScript`. You
+Therefore tutorials or example scripts created for other runtimes will likely
+not work with `artemis`. For example, the JavaScript function `console.table()`
+does not exist in `artemis`. However, the functions `console.log()` and
+`console.error()` do exist in `artemis`.
+
+There JavaScript runtime for `artemis` is designed specifically to assist with
+scripting for IR and forensic investigations.
+
+There are currently some additional limitations to scripting with `artemis`.
+
+1. All scripts executed through `artemis` must be in `JavaScript`. You
    **cannot** execute `TypeScript` scripts directly. You **must** compile and
    bundle them into one (1) `JavaScript` file.
-3. The `JavaScript` must be in common JS format (cjs). EMCAScript (ES) module
+2. The `JavaScript` must be in common JS format (cjs). EMCAScript (ES) module
    scripts are not supported. The example code below uses `esbuild` to bundle
    the `main.ts` file to `JavaScript` using CJS format via `deno run build.ts`:
 
@@ -29,6 +39,3 @@ async function main() {
 
 main();
 ```
-
-Adding support for some of these features should be possible and may be added in
-a future release of `artemis`.

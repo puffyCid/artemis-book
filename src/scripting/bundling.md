@@ -126,12 +126,11 @@ console when bundling.
 ### `--no-check` Flag
 
 This flag tells `Deno` not to type check values. This flag is required due to:
-`Deno[Deno.internal].core.ops.get_registry(path)`\
+`Deno.core.ops.get_registry(path)`\
 The Deno binary is designed to support code written for the Deno platform.
-However, we are using the code in `artemis` which includes the `deno_runtime`
-and has extra Rust functions registered with it. Ex: `get_registry`.\
+However, we are using a custom Deno runtime.\
 The Deno binary has no idea what `get_registry` is because it is a custom
-function we have registered in our own `deno_runtime`.
+function we have registered in our own runtime.
 
 ### Output
 
