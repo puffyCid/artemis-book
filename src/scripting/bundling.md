@@ -1,10 +1,9 @@
 # Bundling
 
 Currently `artemis` requires that we have all of our `JavaScript` code in one
-(1) `.js` file. However, while simple scripts may only be one (1) file, if we
-decide to import a third-party module, an `artemis` function, or split our code
-into multiple files we now have multiple files that need to be combine into one
-(1) `.js` file.
+(1) `.js` file. However, while very simple scripts may only be one (1) file, if
+we decide to import an `artemis` function, or split our code into multiple files
+we now have multiple files that need to be combine into one (1) `.js` file.
 
 A Bundler can help us perform this task.
 
@@ -126,12 +125,11 @@ console when bundling.
 ### `--no-check` Flag
 
 This flag tells `Deno` not to type check values. This flag is required due to:
-`Deno[Deno.internal].core.ops.get_registry(path)`\
+`Deno.core.ops.get_registry(path)`\
 The Deno binary is designed to support code written for the Deno platform.
-However, we are using the code in `artemis` which includes the `deno_runtime`
-and has extra Rust functions registered with it. Ex: `get_registry`.\
+However, we are using a custom Deno runtime.\
 The Deno binary has no idea what `get_registry` is because it is a custom
-function we have registered in our own `deno_runtime`.
+function we have registered in our own runtime.
 
 ### Output
 
@@ -141,7 +139,7 @@ function we have registered in our own `deno_runtime`.
 // This code was bundled using `deno bundle` and it's not recommended to edit it manually
 
 function get_registry(path) {
-    const data = Deno[Deno.internal].core.ops.get_registry(path);
+    const data = Deno.core.ops.get_registry(path);
     const reg_array = JSON.parse(data);
     return reg_array;
 }
@@ -258,7 +256,7 @@ files into one `.js` file using esbuild. We then execute this code using
 ```javascript
 // https://raw.githubusercontent.com/puffycid/artemis-api/master/src/windows/registry.ts
 function get_registry(path) {
-  const data = Deno[Deno.internal].core.ops.get_registry(path);
+  const data = Deno.core.ops.get_registry(path);
   const reg_array = JSON.parse(data);
   return reg_array;
 }

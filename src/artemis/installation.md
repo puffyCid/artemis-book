@@ -1,6 +1,6 @@
 # Installation
 
-Currently only Windows and macOS binaries from
+Currently only Windows, macOS, and Linux binaries from
 [GitHub Releases](https://github.com/puffycid/artemis) are provided. For now
 these binaries are unsigned. Any other binaries from 3rd party services
 (crates.io, Homebrew, Chocolatey, etc) are unofficial. Support for additional
@@ -12,8 +12,9 @@ Currently `artemis` has been tested on the following types of systems:
 
 - Windows 8.1 and higher. Arch: 64-bit
 - macOS Catalina and higher. Arch: 64-bit and ARM
+- Ubuntu, Fedora, Arch Linux. Arch: 64-bit and ARM
 
-If you would like support for another OS or architecture open an issue.
+If you would like support for another OS or architecture please open an issue.
 
 ## GitHub Releases
 

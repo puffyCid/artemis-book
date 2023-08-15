@@ -55,10 +55,12 @@ filename_regex = ""
 
 # Collection Options
 
-- `drive_letter` Drive letter to use to parse the NTFS file system
-- `start_path` Directory to start walking the filesystem
+- `drive_letter` Drive letter to use to parse the NTFS file system. This
+  configuration is **required**
+- `start_path` Directory to start walking the filesystem. This configuration is
+  **required**
 - `depth` How many directories to descend from the `start_path`. Must be a
-  postive number. Max value is 255.
+  postive number. Max value is 255. This configuration is **required**
 - `recover_indx` Boolean value to carve deleted entries from the `$INDX`
   attribute. Can show evidence of deleted files
 - `metadata` Get [PE](pe.md) data from `PE` files. This configuration is

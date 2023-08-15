@@ -17,10 +17,11 @@ artemis -h
 Usage: artemis [OPTIONS]
 
 Options:
-  -t, --toml <TOML>        Full path tol TOML collector
-  -d, --data <DATA>        Base64 encoded TOML file
-  -h, --help               Print help
-  -V, --version            Print version
+  -t, --toml <TOML>              Full path to TOML collector
+  -d, --decode <DECODE>          Base64 encoded TOML file
+  -j, --javascript <JAVASCRIPT>  Full path to JavaScript file
+  -h, --help                     Print help
+  -V, --version                  Print version
 ```
 
 As mentioned, the `artemis` binary is really just a small wrapper that provides
@@ -81,3 +82,47 @@ artemis.exe -d c3lzdGVtID0gIndpbmRvd3MiCgpbb3V0cHV0XQpuYW1lID0gInByb2Nlc3Nlc19jb
 [artemis] Starting artemis collection!
 [artemis] Finished artemis collection!
 ```
+
+# JavaScript
+
+You can also execute JavaScript code using `artemis`.
+
+```javascript
+// https://raw.githubusercontent.com/puffycid/artemis-api/master/src/windows/processes.ts
+function getWinProcesses(md5, sha1, sha256, pe_info) {
+  const hashes = {
+    md5,
+    sha1,
+    sha256,
+  };
+  const data = Deno.core.ops.get_processes(
+    JSON.stringify(hashes),
+    pe_info,
+  );
+  const results = JSON.parse(data);
+  return results;
+}
+
+// main.ts
+function main() {
+  const md5 = false;
+  const sha1 = false;
+  const sha256 = false;
+  const pe_info = false;
+  const proc_list = getWinProcesses(md5, sha1, sha256, pe_info);
+  console.log(proc_list[0].full_path);
+  return proc_list;
+}
+main();
+```
+
+Executing the above code
+
+```
+sudo ./artemis -j ../../artemis-core/tests/test_data/deno_scripts/vanilla.js
+[artemis] Starting artemis collection!
+[runtime]: "/usr/libexec/nesessionmanager"
+[artemis] Finished artemis collection!
+```
+
+See section on [Scripting](../scripting/deno.md) to learn more!
