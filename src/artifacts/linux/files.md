@@ -2,8 +2,8 @@
 
 A regular Linux filelisting. `artemis` uses the
 [walkdir](https://crates.io/crates/walkdir) crate to recursively walk the files
-and directories on the system. Since a filelisting can be extremely large
-every 100k entries `artemis` will output the data and then continue.
+and directories on the system. Since a filelisting can be extremely large every
+100k entries `artemis` will output the data and then continue.
 
 Other Parsers:
 
@@ -50,12 +50,12 @@ file_regex = "" # Regex for files
 # Collection Options
 
 - `start_path` Where to start the file listing. Must exist on the endpoint. To
-  start at root use `/`
+  start at root use `/`. This configuration is **required**
 - `depth` Specify how many directories to descend from the `start_path`. Default
   is one (1). Must be a postive number. Max value is 255. This configuration is
   **optional**
-- `metadata` Get [ELF](elf.md) data from `ELF` files. This configuration
-  is **optional**. Default is **false**
+- `metadata` Get [ELF](elf.md) data from `ELF` files. This configuration is
+  **optional**. Default is **false**
 - `md5` Boolean value to enable MD5 hashing on all files. This configuration is
   **optional**. Default is **false**
 - `sha1` Boolean value to enable SHA1 hashing on all files. This configuration

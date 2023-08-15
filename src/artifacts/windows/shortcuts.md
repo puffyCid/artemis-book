@@ -42,8 +42,8 @@ path = "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup"
 
 # Collection Options
 
-- `path` Target path where `artemis` should parse `Shortcut` files. This option
-  is **required**
+- `path` Target path where `artemis` should parse `Shortcut` files. This
+  configuration is **required**
 
 # Output Structure
 

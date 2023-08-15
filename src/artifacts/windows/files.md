@@ -57,7 +57,7 @@ file_regex = "" # Regex for files
 # Collection Options
 
 - `start_path` Where to start the file listing. Must exist on the endpoint. To
-  start at root use `C:\\`
+  start at root use `C:\\`. This configuration is **required**
 - `depth` Specify how many directories to descend from the `start_path`. Default
   is one (1). Must be a postive number. Max value is 255. This configuration is
   **optional**

@@ -48,9 +48,10 @@ system_hives = true # SYSTEM, SOFTWARE, SAM, SECURITY
 
 # Collection Options
 
-- `user_hives` Parse all user `Registry` files `NTUSER.DAT` and `UsrClass.dat`
+- `user_hives` Parse all user `Registry` files `NTUSER.DAT` and `UsrClass.dat`.
+  This configuration is **required**
 - `system_hives` Parse all system `Registry` files `SYSTEM`, `SAM`, `SOFTWARE`,
-  `SECURITY`
+  `SECURITY`. This configuration is **required**
 - `alt_drive` Use an alternative driver. This configuration is **optional**. By
   default `artemis` will use the `%systemdrive%` value (typically `C`)
 - `path_regex` Only return `Registry` keys that match provided `path_regex`. All

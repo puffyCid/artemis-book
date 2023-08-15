@@ -12,8 +12,7 @@ Other Parsers:
 References:
 
 - [Services](https://forensafe.com/blogs/windowsservices.html)
-- [Velociraptor]
-  (https://github.com/Velocidex/velociraptor/blob/master/artifacts/definitions/Windows/System/Services.yaml)
+- [Velociraptor](https://github.com/Velocidex/velociraptor/blob/master/artifacts/definitions/Windows/System/Services.yaml)
 - [Libyal](https://winreg-kb.readthedocs.io/en/latest/sources/system-keys/Services-and-drivers.html)
 
 # TOML Collection

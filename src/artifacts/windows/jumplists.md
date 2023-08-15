@@ -12,7 +12,7 @@ There are two (2) types of Jumplist files:
 
 Other parsers:
 
-- [JumplistExplorer](https://ericzimmerman.github.io/)
+- [Jumplist Explorer](https://ericzimmerman.github.io/)
 
 References:
 
