@@ -2,7 +2,7 @@
 
 `artemis` has a single basic guideline for testing:
 
-- All functions must have a test. No exceptions
+- All functions should ideally have a test
 
 For example, if you open a pull request to add a new feature and create three
 (3) new functions. Your must have a test for each new function (three tests
