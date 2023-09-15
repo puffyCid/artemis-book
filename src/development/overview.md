@@ -1,13 +1,17 @@
 # Development Overview
 
-The `artemis` source code is about ~47k lines of Rust code including tests (as
-of May 2023), however its organized in a pretty simple manner.
+The `artemis` source code is about ~66k lines of Rust code across ~540 files as
+of September 2023 (this includes tests), however its organized in a pretty
+simple manner.
 
 From the root of the `artemis` repo:
 
-- `/artemis-core` contains the library component of `artemis`. The bulk of the
-  code is located here
-- `/cli` contains the executable component `artemis`. This is very small.
+- `/artemis-core` workspace containsthe library component of `artemis`. The bulk
+  of the code is located here
+- `/cli` workspace contains the executable component `artemis`. This is very
+  small.
+- `/server` workspace contains the experimental server component of `artemis`.
+  Its currently very bare bones
 
 From `/artemis-core` directory:
 
@@ -15,7 +19,7 @@ From `/artemis-core` directory:
 - `/tests` contains test data and integration tests
 - `/tmp` output directory for all tests (if you choose to run them)
 
-From `artemis-core/src/` directory
+From the `artemis-core/src/` directory
 
 - `/artifacts` contains the code related to parsing forensic artifacts. It is
   broken down by OS and application artifacts
@@ -37,7 +41,7 @@ To keep the codebase organized the follow should be followed when adding a new
 artifact.
 
 - Artifacts have their own subfolder. Ex: `src/artifacts/os/windows/prefetch`
-- The subfolder needs to have the following files at least:
+- The subfolder should have the following files at least:
   - `parser.rs` - Contains the `pub(crate)` accessible functions for the
     artifact
   - `error.rs` - Artifact specific errors
@@ -62,12 +66,12 @@ Currently all artifacts that `artemis` parses are statically coded in the binary
 (they are written in Rust). While this ok, it prevents us from dyanamically
 upating the parser if the artifact format changes (ex: new Windows release).
 
-So for now if you want to implement a new artifact we want to make sure its an
-artifact where it makes sense to implement as a static parser.\
-For example, if you identify a binary formatted log file from a specific
-third-party application that happens to track applications that are executed. A
-parser specific to a third-party application may probably be best written as a
-dynamic parser in the future.
+Currently the [JS runtime](../scripting/deno.md) has minimal support for
+creating parsers. If you are interested in adding a small parser to `artemis`,
+it could be worth first trying to code it using the JS runtime.\
+An example JS runtime parser can be found in the
+[artemis API](https://github.com/puffyCid/artemis-api/blob/main/src/macos/alias.ts)
+repo.
 
 However, if you want to implement a new parser for parsing common Windows
 artifacts such as `Jumplists` then that is definitely something that could be

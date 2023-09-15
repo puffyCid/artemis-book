@@ -19,8 +19,8 @@ of adding a new feature:
 List of useful tools that may aid in development.
 
 - [Unused Features](https://github.com/TimonPost/cargo-unused-features)
-- [Bloat](https://github.com/RazrFalcon/cargo-bloat)
 - [Audit](https://github.com/RustSec/rustsec/tree/main/cargo-audit)
 - [Geiger](https://github.com/rust-secure-code/cargo-geiger)
 - [scc](https://github.com/boyter/scc)
 - [clippy](https://github.com/rust-lang/rust-clippy)
+- [nextest](https://nexte.st/)
