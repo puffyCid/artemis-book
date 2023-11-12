@@ -1,0 +1,517 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>SRUM</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../.././theme/catppuccin.css">
+        <link rel="stylesheet" href="../.././theme/catppuccin-highlight.css">
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Artemis User Guide</li><li class="chapter-item expanded "><a href="../../artemis/installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../../artemis/cli.html"><strong aria-hidden="true">2.</strong> CLI</a></li><li class="chapter-item expanded "><a href="../../artemis/privileges.html"><strong aria-hidden="true">3.</strong> Privileges</a></li><li class="chapter-item expanded affix "><li class="part-title">Collections</li><li class="chapter-item expanded "><a href="../../collections/overview.html"><strong aria-hidden="true">4.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../../collections/format.html"><strong aria-hidden="true">5.</strong> Format</a></li><li class="chapter-item expanded "><a href="../../collections/output.html"><strong aria-hidden="true">6.</strong> Output</a></li><li class="chapter-item expanded "><a href="../../collections/uploads.html"><strong aria-hidden="true">7.</strong> Uploads</a></li><li class="chapter-item expanded affix "><li class="part-title">Artifacts</li><li class="chapter-item expanded "><a href="../../artifacts/overview.html"><strong aria-hidden="true">8.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../../artifacts/windows.html"><strong aria-hidden="true">9.</strong> Windows</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../artifacts/windows/amcache.html"><strong aria-hidden="true">9.1.</strong> Amcache</a></li><li class="chapter-item expanded "><a href="../../artifacts/windows/bits.html"><strong aria-hidden="true">9.2.</strong> Bits</a></li><li class="chapter-item expanded "><a href="../../artifacts/windows/eventlogs.html"><strong aria-hidden="true">9.3.</strong> EventLogs</a></li><li class="chapter-item expanded "><a href="../../artifacts/windows/files.html"><strong aria-hidden="true">9.4.</strong> Files</a></li><li class="chapter-item expanded "><a href="../../artifacts/windows/jumplists.html"><strong aria-hidden="true">9.5.</strong> Jumplists</a></li><li class="chapter-item expanded "><a href="../../artifacts/windows/pe.html"><strong aria-hidden="true">9.6.</strong> PE</a></li><li class="chapter-item expanded "><a href="../../artifacts/windows/prefetch.html"><strong aria-hidden="true">9.7.</strong> Prefetch</a></li><li class="chapter-item expanded "><a href="../../artifacts/windows/processes.html"><strong aria-hidden="true">9.8.</strong> Processes</a></li><li class="chapter-item expanded "><a href="../../artifacts/windows/rawfiles.html"><strong aria-hidden="true">9.9.</strong> RawFiles</a></li><li class="chapter-item expanded "><a href="../../artifacts/windows/recyclebin.html"><strong aria-hidden="true">9.10.</strong> RecycleBin</a></li><li class="chapter-item expanded "><a href="../../artifacts/windows/registry.html"><strong aria-hidden="true">9.11.</strong> Registry</a></li><li class="chapter-item expanded "><a href="../../artifacts/windows/tasks.html"><strong aria-hidden="true">9.12.</strong> Scheduled Tasks</a></li><li class="chapter-item expanded "><a href="../../artifacts/windows/search.html"><strong aria-hidden="true">9.13.</strong> Search</a></li><li class="chapter-item expanded "><a href="../../artifacts/windows/services.html"><strong aria-hidden="true">9.14.</strong> Services</a></li><li class="chapter-item expanded "><a href="../../artifacts/windows/shellbags.html"><strong aria-hidden="true">9.15.</strong> Shellbags</a></li><li class="chapter-item expanded "><a href="../../artifacts/windows/shimcache.html"><strong aria-hidden="true">9.16.</strong> Shimcache</a></li><li class="chapter-item expanded "><a href="../../artifacts/windows/shimdb.html"><strong aria-hidden="true">9.17.</strong> Shimdb</a></li><li class="chapter-item expanded "><a href="../../artifacts/windows/shortcuts.html"><strong aria-hidden="true">9.18.</strong> Shortcuts</a></li><li class="chapter-item expanded "><a href="../../artifacts/windows/srum.html" class="active"><strong aria-hidden="true">9.19.</strong> SRUM</a></li><li class="chapter-item expanded "><a href="../../artifacts/windows/systeminfo.html"><strong aria-hidden="true">9.20.</strong> SystemInfo</a></li><li class="chapter-item expanded "><a href="../../artifacts/windows/userassist.html"><strong aria-hidden="true">9.21.</strong> Userassist</a></li><li class="chapter-item expanded "><a href="../../artifacts/windows/users.html"><strong aria-hidden="true">9.22.</strong> Users</a></li><li class="chapter-item expanded "><a href="../../artifacts/windows/usnjrnl.html"><strong aria-hidden="true">9.23.</strong> UsnJrnl</a></li></ol></li><li class="chapter-item expanded "><a href="../../artifacts/macos.html"><strong aria-hidden="true">10.</strong> macOS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../artifacts/macos/cron.html"><strong aria-hidden="true">10.1.</strong> Cron</a></li><li class="chapter-item expanded "><a href="../../artifacts/macos/emond.html"><strong aria-hidden="true">10.2.</strong> Emond</a></li><li class="chapter-item expanded "><a href="../../artifacts/macos/execpolicy.html"><strong aria-hidden="true">10.3.</strong> ExecPolicy</a></li><li class="chapter-item expanded "><a href="../../artifacts/macos/files.html"><strong aria-hidden="true">10.4.</strong> Files</a></li><li class="chapter-item expanded "><a href="../../artifacts/macos/fsevents.html"><strong aria-hidden="true">10.5.</strong> FsEvents</a></li><li class="chapter-item expanded "><a href="../../artifacts/macos/groups.html"><strong aria-hidden="true">10.6.</strong> Groups</a></li><li class="chapter-item expanded "><a href="../../artifacts/macos/launchd.html"><strong aria-hidden="true">10.7.</strong> Launchd</a></li><li class="chapter-item expanded "><a href="../../artifacts/macos/loginitems.html"><strong aria-hidden="true">10.8.</strong> LoginItems</a></li><li class="chapter-item expanded "><a href="../../artifacts/macos/macho.html"><strong aria-hidden="true">10.9.</strong> Macho</a></li><li class="chapter-item expanded "><a href="../../artifacts/macos/plist.html"><strong aria-hidden="true">10.10.</strong> Plist</a></li><li class="chapter-item expanded "><a href="../../artifacts/macos/processes.html"><strong aria-hidden="true">10.11.</strong> Processes</a></li><li class="chapter-item expanded "><a href="../../artifacts/macos/shellhistory.html"><strong aria-hidden="true">10.12.</strong> ShellHistory</a></li><li class="chapter-item expanded "><a href="../../artifacts/macos/sudo.html"><strong aria-hidden="true">10.13.</strong> Sudo</a></li><li class="chapter-item expanded "><a href="../../artifacts/macos/systeminfo.html"><strong aria-hidden="true">10.14.</strong> SystemInfo</a></li><li class="chapter-item expanded "><a href="../../artifacts/macos/unifiedlogs.html"><strong aria-hidden="true">10.15.</strong> UnifiedLogs</a></li><li class="chapter-item expanded "><a href="../../artifacts/macos/users.html"><strong aria-hidden="true">10.16.</strong> Users</a></li></ol></li><li class="chapter-item expanded "><a href="../../artifacts/linux.html"><strong aria-hidden="true">11.</strong> Linux</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../artifacts/linux/cron.html"><strong aria-hidden="true">11.1.</strong> Cron</a></li><li class="chapter-item expanded "><a href="../../artifacts/linux/elf.html"><strong aria-hidden="true">11.2.</strong> ELF</a></li><li class="chapter-item expanded "><a href="../../artifacts/linux/files.html"><strong aria-hidden="true">11.3.</strong> Files</a></li><li class="chapter-item expanded "><a href="../../artifacts/linux/journals.html"><strong aria-hidden="true">11.4.</strong> Journals</a></li><li class="chapter-item expanded "><a href="../../artifacts/linux/logons.html"><strong aria-hidden="true">11.5.</strong> Logons</a></li><li class="chapter-item expanded "><a href="../../artifacts/linux/processes.html"><strong aria-hidden="true">11.6.</strong> Processes</a></li><li class="chapter-item expanded "><a href="../../artifacts/linux/shellhistory.html"><strong aria-hidden="true">11.7.</strong> ShellHistory</a></li><li class="chapter-item expanded "><a href="../../artifacts/linux/sudo.html"><strong aria-hidden="true">11.8.</strong> Sudo</a></li><li class="chapter-item expanded "><a href="../../artifacts/linux/systeminfo.html"><strong aria-hidden="true">11.9.</strong> SystemInfo</a></li></ol></li><li class="chapter-item expanded "><a href="../../artifacts/applications.html"><strong aria-hidden="true">12.</strong> Applications</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../artifacts/applications/chromium.html"><strong aria-hidden="true">12.1.</strong> Chromium</a></li><li class="chapter-item expanded "><a href="../../artifacts/applications/firefox.html"><strong aria-hidden="true">12.2.</strong> Firefox</a></li><li class="chapter-item expanded "><a href="../../artifacts/applications/safari.html"><strong aria-hidden="true">12.3.</strong> Safari</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Scripting</li><li class="chapter-item expanded "><a href="../../scripting/deno.html"><strong aria-hidden="true">13.</strong> Deno</a></li><li class="chapter-item expanded "><a href="../../scripting/typescript.html"><strong aria-hidden="true">14.</strong> TypeScript</a></li><li class="chapter-item expanded "><a href="../../scripting/bundling.html"><strong aria-hidden="true">15.</strong> Bundling</a></li><li class="chapter-item expanded "><a href="../../scripting/scripts.html"><strong aria-hidden="true">16.</strong> Scripts</a></li><li class="chapter-item expanded "><a href="../../scripting/filterscripts.html"><strong aria-hidden="true">17.</strong> Filter Scripts</a></li><li class="chapter-item expanded "><a href="../../scripting/limitations.html"><strong aria-hidden="true">18.</strong> Limitations</a></li><li class="chapter-item expanded affix "><li class="part-title">Library</li><li class="chapter-item expanded "><a href="../../core/overview.html"><strong aria-hidden="true">19.</strong> Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Examples</li><li class="chapter-item expanded "><a href="../../examples/execution.html"><strong aria-hidden="true">20.</strong> Execution</a></li><li class="chapter-item expanded "><a href="../../examples/triage.html"><strong aria-hidden="true">21.</strong> Triage</a></li><li class="chapter-item expanded "><a href="../../examples/live_response.html"><strong aria-hidden="true">22.</strong> Live Response</a></li><li class="chapter-item expanded "><a href="../../examples/file_listings.html"><strong aria-hidden="true">23.</strong> File Listings</a></li><li class="chapter-item expanded "><a href="../../examples/scripts.html"><strong aria-hidden="true">24.</strong> Scripts</a></li><li class="chapter-item expanded affix "><li class="part-title">Development</li><li class="chapter-item expanded "><a href="../../development/overview.html"><strong aria-hidden="true">25.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../../development/building.html"><strong aria-hidden="true">26.</strong> Building</a></li><li class="chapter-item expanded "><a href="../../development/adding.html"><strong aria-hidden="true">27.</strong> Adding Features</a></li><li class="chapter-item expanded "><a href="../../development/testing.html"><strong aria-hidden="true">28.</strong> Testing</a></li><li class="chapter-item expanded "><a href="../../development/learning.html"><strong aria-hidden="true">29.</strong> Learning</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="srum"><a class="header" href="#srum">SRUM</a></h1>
+<p>Windows System Resource Utilization Monitor (<code>SRUM</code>) is a service that tracks
+application resource usage. The service tracks application data such as time
+running, bytes sent, bytes received, energy usage, and lots more.<br />
+This service was introduced in Windows 8 and is stored in an ESE database at
+<code>C:\Windows\System32\sru\SRUDB.dat</code>. On Windows 8 some of the data can be found
+in the Registry too (temporary storage before writing to SRUDB.dat), but in
+later versions of Windows the data is no longer in the Registry.</p>
+<p>Other Parsers:</p>
+<ul>
+<li><a href="https://docs.velociraptor.app/artifact_references/pages/windows.forensics.srum/">Velociraptor</a></li>
+<li><a href="https://ericzimmerman.github.io/#!index.md">SRUMECmd</a></li>
+</ul>
+<p>References:</p>
+<ul>
+<li><a href="https://github.com/libyal/esedb-kb/blob/main/documentation/System%20Resource%20Usage%20Monitor%20(SRUM).asciidoc">Libyal</a></li>
+<li><a href="https://velociraptor.velocidex.com/digging-into-the-system-resource-usage-monitor-srum-afbadb1a375">Velociraptor</a></li>
+</ul>
+<h1 id="toml-collection"><a class="header" href="#toml-collection">TOML Collection</a></h1>
+<pre><code class="language-toml">system = &quot;windows&quot;
+
+[output]
+name = &quot;srum_collection&quot;
+directory = &quot;./tmp&quot;
+format = &quot;json&quot;
+compress = false
+endpoint_id = &quot;6c51b123-1522-4572-9f2a-0bd5abd81b82&quot;
+collection_id = 1
+output = &quot;local&quot;
+
+[[artifacts]]
+artifact_name = &quot;srum&quot;
+[artifacts.srum]
+# Optional
+# alt_path = &quot;C:\Windows\System32\srum\SRUDB.dat&quot;
+</code></pre>
+<h1 id="collection-options"><a class="header" href="#collection-options">Collection Options</a></h1>
+<ul>
+<li><code>alt_path</code> An alternative path to the <code>SRUM</code> ESE database. This configuration
+is <strong>optional</strong>. By default <code>artemis</code> will use
+<code>%systemdrive%\Windows\System32\srum\SRUDB.dat</code></li>
+</ul>
+<h1 id="output-structure"><a class="header" href="#output-structure">Output Structure</a></h1>
+<p>An array of entries based on each <code>SRUM</code> table</p>
+<pre><code class="language-typescript">/**
+ * SRUM table associated with application executions `{D10CA2FE-6FCF-4F6D-848E-B2E99266FA89}`
+ */
+export interface ApplicationInfo {
+  /**ID in for row in the ESE table */
+  auto_inc_id: number;
+  /**Timestamp when ESE table was updated in UNIXEPOCH seconds */
+  timestamp: number;
+  /**Application name */
+  app_id: string;
+  /**SID associated with the application process */
+  user_id: string;
+  /**Foreground Cycle time for application */
+  foreground_cycle_time: number;
+  /**Background Cycle time for application */
+  background_cycle_time: number;
+  /**Facetime for application */
+  facetime: number;
+  /**Count of foreground context switches */
+  foreground_context_switches: number;
+  /**Count of background context switches */
+  background_context_switches: number;
+  /**Count of foreground bytes read */
+  foreground_bytes_read: number;
+  /**Count of background bytes read */
+  foreground_bytes_written: number;
+  /**Count of foreground read operations */
+  foreground_num_read_operations: number;
+  /**Count of foreground write operations */
+  foreground_num_write_options: number;
+  /**Count of foreground flushes */
+  foreground_number_of_flushes: number;
+  /**Count of background bytes read */
+  background_bytes_read: number;
+  /**Count of background write operations */
+  background_bytes_written: number;
+  /**Count of background read operations */
+  background_num_read_operations: number;
+  /**Count of background write operations */
+  background_num_write_operations: number;
+  /**Count of background flushes */
+  background_number_of_flushes: number;
+}
+</code></pre>
+<pre><code class="language-typescript">/**
+ * SRUM table associated with the timeline of an application's execution `{D10CA2FE-6FCF-4F6D-848E-B2E99266FA86}`
+ */
+export interface ApplicationTimeline {
+  /**ID in for row in the ESE table */
+  auto_inc_id: number;
+  /**Timestamp when ESE table was updated in UNIXEPOCH seconds */
+  timestamp: number;
+  /**Application name */
+  app_id: string;
+  /**SID associated with the application process */
+  user_id: string;
+  /**Flags associated with entry */
+  flags: number;
+  /**End time of entry */
+  end_time: number;
+  /**Duration of timeline in microseconds */
+  duration_ms: number;
+  /**Span of timeline in microseconds */
+  span_ms: number;
+  /**Timeline end for entry */
+  timeline_end: number;
+  /**In focus value for entry */
+  in_focus_timeline: number;
+  /**User input value for entry */
+  user_input_timeline: number;
+  /**Comp rendered value for entry */
+  comp_rendered_timeline: number;
+  /**Comp dirtied value for entry */
+  comp_dirtied_timeline: number;
+  /**Comp propaged value for entry */
+  comp_propagated_timeline: number;
+  /**Audio input value for entry */
+  audio_in_timeline: number;
+  /**Audio output value for entry */
+  audio_out_timeline: number;
+  /**CPU value for entry */
+  cpu_timeline: number;
+  /**Disk value for entry */
+  disk_timeline: number;
+  /**Network value for entry */
+  network_timeline: number;
+  /**MBB value for entry */
+  mbb_timeline: number;
+  /**In focus seconds count */
+  in_focus_s: number;
+  /**PSM foreground seconds count */
+  psm_foreground_s: number;
+  /**User input seconds count */
+  user_input_s: number;
+  /**Comp rendered seconds countr */
+  comp_rendered_s: number;
+  /**Comp dirtied seconds count */
+  comp_dirtied_s: number;
+  /**Comp propagated seconds count */
+  comp_propagated_s: number;
+  /**Audio input seconds count */
+  audio_in_s: number;
+  /**Audio output seconds count */
+  audio_out_s: number;
+  /**Cycles value for entry */
+  cycles: number;
+  /**Cycles breakdown value for entry */
+  cycles_breakdown: number;
+  /**Cycles attribute value for entry */
+  cycles_attr: number;
+  /**Cycles attribute breakdown for entry */
+  cycles_attr_breakdown: number;
+  /**Cycles WOB value for entry */
+  cycles_wob: number;
+  /**Cycles WOB breakdown value for entry */
+  cycles_wob_breakdown: number;
+  /**Disk raw value for entry */
+  disk_raw: number;
+  /**Network tail raw value for entry */
+  network_tail_raw: number;
+  /**Network bytes associated with entry*/
+  network_bytes_raw: number;
+  /**MBB tail raw value for entry */
+  mbb_tail_raw: number;
+  /**MBB bytes associated with entry */
+  mbb_bytes_raw: number;
+  /**Display required seconds count */
+  display_required_s: number;
+  /**Display required timeline value for entry */
+  display_required_timeline: number;
+  /**Keyboard input timeline value for entry */
+  keyboard_input_timeline: number;
+  /**Keybouard input seconds count */
+  keyboard_input_s: number;
+  /**Mouse input seconds count */
+  mouse_input_s: number;
+}
+</code></pre>
+<pre><code class="language-typescript">/**
+ * SRUM table associated with VFU `{7ACBBAA3-D029-4BE4-9A7A-0885927F1D8F}`. Unsure what this tracks.
+ */
+export interface AppVfu {
+  /**ID in for row in the ESE table */
+  auto_inc_id: number;
+  /**Timestamp when ESE table was updated in UNIXEPOCH seconds */
+  timestamp: number;
+  /**Application name */
+  app_id: string;
+  /**SID associated with the application process */
+  user_id: string;
+  /**Flags associated with VFU entry */
+  flags: number;
+  /**Start time in UNIXEPOCH seconds associated with VFU entry */
+  start_time: number;
+  /**End time in UNIXEPOCH seconds associated with VFU entry */
+  end_time: number;
+  /**Base64 encoded usage data associated with VFU entry */
+  usage: string;
+}
+</code></pre>
+<pre><code class="language-typescript">/**
+ * SRUM table associated witn EnergyInfo `{DA73FB89-2BEA-4DDC-86B8-6E048C6DA477}`
+ */
+export interface EnergyInfo {
+  /**ID in for row in the ESE table */
+  auto_inc_id: number;
+  /**Timestamp when ESE table was updated in UNIXEPOCH seconds */
+  timestamp: number;
+  /**Application name */
+  app_id: string;
+  /**SID associated with the application process */
+  user_id: string;
+  /**Base64 encoded binary data associated witn EnegyInfo entry */
+  binary_data: string;
+}
+</code></pre>
+<pre><code class="language-typescript">/**
+ * SRUM table associated with EnergyUsage `{FEE4E14F-02A9-4550-B5CE-5FA2DA202E37}` and `{FEE4E14F-02A9-4550-B5CE-5FA2DA202E37}LT`
+ */
+export interface EnergyUsage {
+  /**ID in for row in the ESE table */
+  auto_inc_id: number;
+  /**Timestamp when ESE table was updated in UNIXEPOCH seconds */
+  timestamp: number;
+  /**Application name */
+  app_id: string;
+  /**SID associated with the application process */
+  user_id: string;
+  /**Event Timestamp in UNIXEPOCH seconds */
+  event_timestamp: number;
+  /**State transition associated with entry */
+  state_transition: number;
+  /**Full charged capacity associated with entry */
+  full_charged_capacity: number;
+  /**Designed capacity associated with entry */
+  designed_capacity: number;
+  /** Charge level associated with entry */
+  charge_level: number;
+  /**Cycle count associated with entry */
+  cycle_count: number;
+  /**Configuration hash associated with entry */
+  configuration_hash: number;
+}
+</code></pre>
+<pre><code class="language-typescript">/**
+ * SRUM table associated with NetworkInfo `{973F5D5C-1D90-4944-BE8E-24B94231A174}`
+ */
+export interface NetworkInfo {
+  /**ID in for row in the ESE table */
+  auto_inc_id: number;
+  /**Timestamp when ESE table was updated in UNIXEPOCH seconds */
+  timestamp: number;
+  /**Application name */
+  app_id: string;
+  /**SID associated with the application process */
+  user_id: string;
+  /**Interface luid associated with entry */
+  interface_luid: number;
+  /**L2 profile ID associated with entry */
+  l2_profile_id: number;
+  /**L2 profiel flags associated with entry */
+  l2_profile_flags: number;
+  /**Bytes sent associated with entry */
+  bytes_sent: number;
+  /**Bytes received associated with entry */
+  bytes_recvd: number;
+}
+</code></pre>
+<pre><code class="language-typescript">/**
+ * SRUM table associated with NetworkConnectivityInfo `{DD6636C4-8929-4683-974E-22C046A43763}`
+ */
+export interface NetworkConnectivityInfo {
+  /**ID in for row in the ESE table */
+  auto_inc_id: number;
+  /**Timestamp when ESE table was updated in UNIXEPOCH seconds */
+  timestamp: number;
+  /**Application name */
+  app_id: string;
+  /**SID associated with the application process */
+  user_id: string;
+  /**Interface luid associated with entry */
+  interface_luid: number;
+  /**L2 profile ID associated with entry */
+  l2_profile_id: number;
+  /**Connected time associated with entry */
+  connected_time: number;
+  /*Connect start time associated with entry in UNIXEPOCH seconds*/
+  connect_start_time: number;
+  /**L2 profile flags associated with entry */
+  l2_profile_flags: number;
+}
+</code></pre>
+<pre><code class="language-typescript">/**
+ * SRUM table associated with NotificationInfo `{D10CA2FE-6FCF-4F6D-848E-B2E99266FA86}`
+ */
+export interface NotificationInfo {
+  /**ID in for row in the ESE table */
+  auto_inc_id: number;
+  /**Timestamp when ESE table was updated in UNIXEPOCH seconds */
+  timestamp: number;
+  /**Application name */
+  app_id: string;
+  /**SID associated with the application process */
+  user_id: string;
+  /**Notification type associated with entry */
+  notification_type: number;
+  /**Size of payload associated with entry */
+  payload_size: number;
+  /**Network type associated with entry */
+  network_type: number;
+}
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../artifacts/windows/shortcuts.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../artifacts/windows/systeminfo.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../artifacts/windows/shortcuts.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../artifacts/windows/systeminfo.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

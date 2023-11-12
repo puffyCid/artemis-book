@@ -1,0 +1,333 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Output</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href=".././theme/catppuccin.css">
+        <link rel="stylesheet" href=".././theme/catppuccin-highlight.css">
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Artemis User Guide</li><li class="chapter-item expanded "><a href="../artemis/installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../artemis/cli.html"><strong aria-hidden="true">2.</strong> CLI</a></li><li class="chapter-item expanded "><a href="../artemis/privileges.html"><strong aria-hidden="true">3.</strong> Privileges</a></li><li class="chapter-item expanded affix "><li class="part-title">Collections</li><li class="chapter-item expanded "><a href="../collections/overview.html"><strong aria-hidden="true">4.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../collections/format.html"><strong aria-hidden="true">5.</strong> Format</a></li><li class="chapter-item expanded "><a href="../collections/output.html" class="active"><strong aria-hidden="true">6.</strong> Output</a></li><li class="chapter-item expanded "><a href="../collections/uploads.html"><strong aria-hidden="true">7.</strong> Uploads</a></li><li class="chapter-item expanded affix "><li class="part-title">Artifacts</li><li class="chapter-item expanded "><a href="../artifacts/overview.html"><strong aria-hidden="true">8.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../artifacts/windows.html"><strong aria-hidden="true">9.</strong> Windows</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../artifacts/windows/amcache.html"><strong aria-hidden="true">9.1.</strong> Amcache</a></li><li class="chapter-item expanded "><a href="../artifacts/windows/bits.html"><strong aria-hidden="true">9.2.</strong> Bits</a></li><li class="chapter-item expanded "><a href="../artifacts/windows/eventlogs.html"><strong aria-hidden="true">9.3.</strong> EventLogs</a></li><li class="chapter-item expanded "><a href="../artifacts/windows/files.html"><strong aria-hidden="true">9.4.</strong> Files</a></li><li class="chapter-item expanded "><a href="../artifacts/windows/jumplists.html"><strong aria-hidden="true">9.5.</strong> Jumplists</a></li><li class="chapter-item expanded "><a href="../artifacts/windows/pe.html"><strong aria-hidden="true">9.6.</strong> PE</a></li><li class="chapter-item expanded "><a href="../artifacts/windows/prefetch.html"><strong aria-hidden="true">9.7.</strong> Prefetch</a></li><li class="chapter-item expanded "><a href="../artifacts/windows/processes.html"><strong aria-hidden="true">9.8.</strong> Processes</a></li><li class="chapter-item expanded "><a href="../artifacts/windows/rawfiles.html"><strong aria-hidden="true">9.9.</strong> RawFiles</a></li><li class="chapter-item expanded "><a href="../artifacts/windows/recyclebin.html"><strong aria-hidden="true">9.10.</strong> RecycleBin</a></li><li class="chapter-item expanded "><a href="../artifacts/windows/registry.html"><strong aria-hidden="true">9.11.</strong> Registry</a></li><li class="chapter-item expanded "><a href="../artifacts/windows/tasks.html"><strong aria-hidden="true">9.12.</strong> Scheduled Tasks</a></li><li class="chapter-item expanded "><a href="../artifacts/windows/search.html"><strong aria-hidden="true">9.13.</strong> Search</a></li><li class="chapter-item expanded "><a href="../artifacts/windows/services.html"><strong aria-hidden="true">9.14.</strong> Services</a></li><li class="chapter-item expanded "><a href="../artifacts/windows/shellbags.html"><strong aria-hidden="true">9.15.</strong> Shellbags</a></li><li class="chapter-item expanded "><a href="../artifacts/windows/shimcache.html"><strong aria-hidden="true">9.16.</strong> Shimcache</a></li><li class="chapter-item expanded "><a href="../artifacts/windows/shimdb.html"><strong aria-hidden="true">9.17.</strong> Shimdb</a></li><li class="chapter-item expanded "><a href="../artifacts/windows/shortcuts.html"><strong aria-hidden="true">9.18.</strong> Shortcuts</a></li><li class="chapter-item expanded "><a href="../artifacts/windows/srum.html"><strong aria-hidden="true">9.19.</strong> SRUM</a></li><li class="chapter-item expanded "><a href="../artifacts/windows/systeminfo.html"><strong aria-hidden="true">9.20.</strong> SystemInfo</a></li><li class="chapter-item expanded "><a href="../artifacts/windows/userassist.html"><strong aria-hidden="true">9.21.</strong> Userassist</a></li><li class="chapter-item expanded "><a href="../artifacts/windows/users.html"><strong aria-hidden="true">9.22.</strong> Users</a></li><li class="chapter-item expanded "><a href="../artifacts/windows/usnjrnl.html"><strong aria-hidden="true">9.23.</strong> UsnJrnl</a></li></ol></li><li class="chapter-item expanded "><a href="../artifacts/macos.html"><strong aria-hidden="true">10.</strong> macOS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../artifacts/macos/cron.html"><strong aria-hidden="true">10.1.</strong> Cron</a></li><li class="chapter-item expanded "><a href="../artifacts/macos/emond.html"><strong aria-hidden="true">10.2.</strong> Emond</a></li><li class="chapter-item expanded "><a href="../artifacts/macos/execpolicy.html"><strong aria-hidden="true">10.3.</strong> ExecPolicy</a></li><li class="chapter-item expanded "><a href="../artifacts/macos/files.html"><strong aria-hidden="true">10.4.</strong> Files</a></li><li class="chapter-item expanded "><a href="../artifacts/macos/fsevents.html"><strong aria-hidden="true">10.5.</strong> FsEvents</a></li><li class="chapter-item expanded "><a href="../artifacts/macos/groups.html"><strong aria-hidden="true">10.6.</strong> Groups</a></li><li class="chapter-item expanded "><a href="../artifacts/macos/launchd.html"><strong aria-hidden="true">10.7.</strong> Launchd</a></li><li class="chapter-item expanded "><a href="../artifacts/macos/loginitems.html"><strong aria-hidden="true">10.8.</strong> LoginItems</a></li><li class="chapter-item expanded "><a href="../artifacts/macos/macho.html"><strong aria-hidden="true">10.9.</strong> Macho</a></li><li class="chapter-item expanded "><a href="../artifacts/macos/plist.html"><strong aria-hidden="true">10.10.</strong> Plist</a></li><li class="chapter-item expanded "><a href="../artifacts/macos/processes.html"><strong aria-hidden="true">10.11.</strong> Processes</a></li><li class="chapter-item expanded "><a href="../artifacts/macos/shellhistory.html"><strong aria-hidden="true">10.12.</strong> ShellHistory</a></li><li class="chapter-item expanded "><a href="../artifacts/macos/sudo.html"><strong aria-hidden="true">10.13.</strong> Sudo</a></li><li class="chapter-item expanded "><a href="../artifacts/macos/systeminfo.html"><strong aria-hidden="true">10.14.</strong> SystemInfo</a></li><li class="chapter-item expanded "><a href="../artifacts/macos/unifiedlogs.html"><strong aria-hidden="true">10.15.</strong> UnifiedLogs</a></li><li class="chapter-item expanded "><a href="../artifacts/macos/users.html"><strong aria-hidden="true">10.16.</strong> Users</a></li></ol></li><li class="chapter-item expanded "><a href="../artifacts/linux.html"><strong aria-hidden="true">11.</strong> Linux</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../artifacts/linux/cron.html"><strong aria-hidden="true">11.1.</strong> Cron</a></li><li class="chapter-item expanded "><a href="../artifacts/linux/elf.html"><strong aria-hidden="true">11.2.</strong> ELF</a></li><li class="chapter-item expanded "><a href="../artifacts/linux/files.html"><strong aria-hidden="true">11.3.</strong> Files</a></li><li class="chapter-item expanded "><a href="../artifacts/linux/journals.html"><strong aria-hidden="true">11.4.</strong> Journals</a></li><li class="chapter-item expanded "><a href="../artifacts/linux/logons.html"><strong aria-hidden="true">11.5.</strong> Logons</a></li><li class="chapter-item expanded "><a href="../artifacts/linux/processes.html"><strong aria-hidden="true">11.6.</strong> Processes</a></li><li class="chapter-item expanded "><a href="../artifacts/linux/shellhistory.html"><strong aria-hidden="true">11.7.</strong> ShellHistory</a></li><li class="chapter-item expanded "><a href="../artifacts/linux/sudo.html"><strong aria-hidden="true">11.8.</strong> Sudo</a></li><li class="chapter-item expanded "><a href="../artifacts/linux/systeminfo.html"><strong aria-hidden="true">11.9.</strong> SystemInfo</a></li></ol></li><li class="chapter-item expanded "><a href="../artifacts/applications.html"><strong aria-hidden="true">12.</strong> Applications</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../artifacts/applications/chromium.html"><strong aria-hidden="true">12.1.</strong> Chromium</a></li><li class="chapter-item expanded "><a href="../artifacts/applications/firefox.html"><strong aria-hidden="true">12.2.</strong> Firefox</a></li><li class="chapter-item expanded "><a href="../artifacts/applications/safari.html"><strong aria-hidden="true">12.3.</strong> Safari</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Scripting</li><li class="chapter-item expanded "><a href="../scripting/deno.html"><strong aria-hidden="true">13.</strong> Deno</a></li><li class="chapter-item expanded "><a href="../scripting/typescript.html"><strong aria-hidden="true">14.</strong> TypeScript</a></li><li class="chapter-item expanded "><a href="../scripting/bundling.html"><strong aria-hidden="true">15.</strong> Bundling</a></li><li class="chapter-item expanded "><a href="../scripting/scripts.html"><strong aria-hidden="true">16.</strong> Scripts</a></li><li class="chapter-item expanded "><a href="../scripting/filterscripts.html"><strong aria-hidden="true">17.</strong> Filter Scripts</a></li><li class="chapter-item expanded "><a href="../scripting/limitations.html"><strong aria-hidden="true">18.</strong> Limitations</a></li><li class="chapter-item expanded affix "><li class="part-title">Library</li><li class="chapter-item expanded "><a href="../core/overview.html"><strong aria-hidden="true">19.</strong> Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Examples</li><li class="chapter-item expanded "><a href="../examples/execution.html"><strong aria-hidden="true">20.</strong> Execution</a></li><li class="chapter-item expanded "><a href="../examples/triage.html"><strong aria-hidden="true">21.</strong> Triage</a></li><li class="chapter-item expanded "><a href="../examples/live_response.html"><strong aria-hidden="true">22.</strong> Live Response</a></li><li class="chapter-item expanded "><a href="../examples/file_listings.html"><strong aria-hidden="true">23.</strong> File Listings</a></li><li class="chapter-item expanded "><a href="../examples/scripts.html"><strong aria-hidden="true">24.</strong> Scripts</a></li><li class="chapter-item expanded affix "><li class="part-title">Development</li><li class="chapter-item expanded "><a href="../development/overview.html"><strong aria-hidden="true">25.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../development/building.html"><strong aria-hidden="true">26.</strong> Building</a></li><li class="chapter-item expanded "><a href="../development/adding.html"><strong aria-hidden="true">27.</strong> Adding Features</a></li><li class="chapter-item expanded "><a href="../development/testing.html"><strong aria-hidden="true">28.</strong> Testing</a></li><li class="chapter-item expanded "><a href="../development/learning.html"><strong aria-hidden="true">29.</strong> Learning</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="artemis-output-formats"><a class="header" href="#artemis-output-formats">Artemis Output Formats</a></h1>
+<p><code>artemis</code> supports two (2) types of output formats:
+<a href="https://jsonlines.org/"><code>jsonl</code></a> and <code>json</code>. Both types will output the results
+using a random uuid for the filename such as
+<code>68330d32-c35e-4d43-8655-1cb5e9d90b83.json</code></p>
+<p>When you run <code>artemis</code> three (3) types of files will be generated:</p>
+<ul>
+<li><code>&lt;uuuid&gt;.{json or jsonl}</code> a unique filename dependent on the format selected.
+These files contain the artifact data output. Depending on the collection
+multiple <code>&lt;uuuid&gt;.{json or jsonl}</code> files will be created</li>
+<li><code>&lt;uuid&gt;.log</code> a log file containing any errors or warnings generated by
+<code>artemis</code> during the collection. Only one (1) per collection will exist</li>
+<li><code>status.log</code> a log file that maps the <code>&lt;uuuid&gt;.{json or jsonl}</code> to an artifact
+name. <code>&lt;uuuid&gt;.{json or jsonl}</code> also contains the artifact name. The
+<code>status.log</code> provides a quick way to see what files contain a specific
+artifact. Only one (1) per collection will exist</li>
+</ul>
+<p>The <code>json</code> output from the <code>amcache</code> TOML collection from the previous page
+would look like the following:</p>
+<pre><code class="language-json">{
+  &quot;metadata&quot;: {
+    &quot;endpoint_id&quot;: &quot;6c51b123-1522-4572-9f2a-0bd5abd81b82&quot;,
+    &quot;id&quot;: 1,
+    &quot;uuid&quot;: &quot;41bc55e4-bc7b-4798-8808-4351092595a5&quot;,
+    &quot;artifact_name&quot;: &quot;amcache&quot;,
+    &quot;complete_time&quot;: 1680466070,
+    &quot;start_time&quot;: 1680466065,
+    &quot;hostname&quot;: &quot;DESKTOP-UQQDFT8&quot;,
+    &quot;os_version&quot;: &quot;11 (22000)&quot;,
+    &quot;platform&quot;: &quot;Windows&quot;,
+    &quot;kernel_version&quot;: &quot;22000&quot;,
+    &quot;load_performance&quot;: {
+      &quot;avg_one_min&quot;: 0.0,
+      &quot;avg_five_min&quot;: 0.0,
+      &quot;avg_fifteen_min&quot;: 0.0
+    }
+  },
+  &quot;data&quot;: [
+    {
+      &quot;first_execution&quot;: 1641252583,
+      &quot;path&quot;: &quot;c:\\program files (x86)\\windows kits\\10\\debuggers\\x86\\1394\\1394kdbg.sys&quot;,
+      &quot;name&quot;: &quot;1394kdbg.sys&quot;,
+      &quot;original_name&quot;: &quot;1394dbg.sys&quot;,
+      &quot;version&quot;: &quot;10.0.19041.685 (winbuild.160101.0800)&quot;,
+      &quot;binary_type&quot;: &quot;pe32_i386&quot;,
+      &quot;product_version&quot;: &quot;10.0.19041.685&quot;,
+      &quot;product_name&quot;: &quot;microsoft® windows® operating system&quot;,
+      &quot;language&quot;: &quot;&quot;,
+      &quot;file_id&quot;: &quot;&quot;,
+      &quot;link_date&quot;: &quot;10/28/2087 21:21:59&quot;,
+      &quot;path_hash&quot;: &quot;1394kdbg.sys|2912931c5988cc06&quot;,
+      &quot;program_id&quot;: &quot;00a68cd0bda5b35cd2f03e8556cad622f00000904&quot;,
+      &quot;size&quot;: &quot;38352&quot;,
+      &quot;publisher&quot;: &quot;microsoft corporation&quot;,
+      &quot;usn&quot;: &quot;4010442296&quot;,
+      &quot;sha1&quot;: &quot;&quot;,
+      &quot;reg_path&quot;: &quot;{11517B7C-E79D-4e20-961B-75A811715ADD}\\Root\\InventoryApplicationFile\\1394kdbg.sys|2912931c5988cc06&quot;
+    }
+  ]
+}
+</code></pre>
+<p>All artifacts parsed by <code>artemis</code> will be formatted similar to the output above.</p>
+<ul>
+<li><code>metadata</code> object that contains metadata about the system. All artifacts will
+contain a metadata object
+<ul>
+<li><code>endpoint_id</code> The ID associated with the endpoint. This is from the <code>TOML</code>
+input</li>
+<li><code>id</code> The ID associated with the collection. This is from the <code>TOML</code> input</li>
+<li><code>uuid</code> Unique ID associated with the output</li>
+<li><code>artifact_name</code> The name of the artifact collected. This is from the <code>TOML</code>
+input</li>
+<li><code>complete_time</code> The time <code>artemis</code> completed parsing the data</li>
+<li><code>start_time</code> The time <code>artemis</code> started parsing the data</li>
+<li><code>hostname</code> The hostname of the endpoint</li>
+<li><code>os_version</code> Thes OS version of the endpoint</li>
+<li><code>platform</code> The platform of the endpoint. Ex: Windows or macOS</li>
+<li><code>kernel_version</code> The kernel version of the endpoint</li>
+<li><code>load_performance</code> The endpoint performance for one, five, and fifteen
+minutes. On Windows these values are always zero
+<ul>
+<li><code>avg_one_min</code> Average load performance for one minute</li>
+<li><code>avg_five_mine</code> Average load performance for five minutes</li>
+<li><code>avg_fifteen_min</code> Average load performance for fifteen minutes</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>data</code> object that contains the artifact specific data. See the
+<a href="../artifacts/overview.html">artifact</a> chapter for output structure for each
+artifact. If you execute <code>JavaScript</code> you can control what the <code>data</code> value
+is. For example you can return a string instead of an object. <code>artemis</code> uses
+serde to serialize the final output</li>
+</ul>
+<p>This data would be saved in a <code>&lt;uuid&gt;.json</code> file</p>
+<p>The <code>jsonl</code> output from the <code>amcache</code> TOML collection from the previous page
+would look like the following:</p>
+<pre><code class="language-jsonl">{&quot;metadata&quot;:{&quot;endpoint_id&quot;:&quot;6c51b123-1522-4572-9f2a-0bd5abd81b82&quot;,&quot;id&quot;:1,&quot;artifact_name&quot;:&quot;amcache&quot;,&quot;complete_time&quot;:1680467122,&quot;start_time&quot;:1680467120,&quot;hostname&quot;:&quot;DESKTOP-UQQDFT8&quot;,&quot;os_version&quot;:&quot;11 (22000)&quot;,&quot;platform&quot;:&quot;Windows&quot;,&quot;kernel_version&quot;:&quot;22000&quot;,&quot;load_performance&quot;:{&quot;avg_one_min&quot;:0.0,&quot;avg_five_min&quot;:0.0,&quot;avg_fifteen_min&quot;:0.0},&quot;uuid&quot;:&quot;64702816-0f24-4e6e-a72a-118cb51c55b4&quot;},&quot;data&quot;:{&quot;first_execution&quot;:1641252583,&quot;path&quot;:&quot;c:\\program files (x86)\\windows kits\\10\\debuggers\\x86\\1394\\1394kdbg.sys&quot;,&quot;name&quot;:&quot;1394kdbg.sys&quot;,&quot;original_name&quot;:&quot;1394dbg.sys&quot;,&quot;version&quot;:&quot;10.0.19041.685 (winbuild.160101.0800)&quot;,&quot;binary_type&quot;:&quot;pe32_i386&quot;,&quot;product_version&quot;:&quot;10.0.19041.685&quot;,&quot;product_name&quot;:&quot;microsoft® windows® operating system&quot;,&quot;language&quot;:&quot;&quot;,&quot;file_id&quot;:&quot;&quot;,&quot;link_date&quot;:&quot;10/28/2087 21:21:59&quot;,&quot;path_hash&quot;:&quot;1394kdbg.sys|2912931c5988cc06&quot;,&quot;program_id&quot;:&quot;00a68cd0bda5b35cd2f03e8556cad622f00000904&quot;,&quot;size&quot;:&quot;38352&quot;,&quot;publisher&quot;:&quot;microsoft corporation&quot;,&quot;usn&quot;:&quot;4010442296&quot;,&quot;sha1&quot;:&quot;&quot;,&quot;reg_path&quot;:&quot;{11517B7C-E79D-4e20-961B-75A811715ADD}\\Root\\InventoryApplicationFile\\1394kdbg.sys|2912931c5988cc06&quot;}}
+{&quot;metadata&quot;:{&quot;endpoint_id&quot;:&quot;6c51b123-1522-4572-9f2a-0bd5abd81b82&quot;,&quot;id&quot;:1,&quot;artifact_name&quot;:&quot;amcache&quot;,&quot;complete_time&quot;:1680467122,&quot;start_time&quot;:1680467120,&quot;hostname&quot;:&quot;DESKTOP-UQQDFT8&quot;,&quot;os_version&quot;:&quot;11 (22000)&quot;,&quot;platform&quot;:&quot;Windows&quot;,&quot;kernel_version&quot;:&quot;22000&quot;,&quot;load_performance&quot;:{&quot;avg_one_min&quot;:0.0,&quot;avg_five_min&quot;:0.0,&quot;avg_fifteen_min&quot;:0.0},&quot;uuid&quot;:&quot;5afa02eb-1e11-48a0-993e-3bb852667db7&quot;},&quot;data&quot;:{&quot;first_execution&quot;:1641252583,&quot;path&quot;:&quot;c:\\program files (x86)\\windows kits\\10\\debuggers\\x64\\1394\\1394kdbg.sys&quot;,&quot;name&quot;:&quot;1394kdbg.sys&quot;,&quot;original_name&quot;:&quot;1394dbg.sys&quot;,&quot;version&quot;:&quot;10.0.19041.685 (winbuild.160101.0800)&quot;,&quot;binary_type&quot;:&quot;pe64_amd64&quot;,&quot;product_version&quot;:&quot;10.0.19041.685&quot;,&quot;product_name&quot;:&quot;microsoft® windows® operating system&quot;,&quot;language&quot;:&quot;&quot;,&quot;file_id&quot;:&quot;&quot;,&quot;link_date&quot;:&quot;11/30/2005 17:06:22&quot;,&quot;path_hash&quot;:&quot;1394kdbg.sys|7e05880d5bf9d27b&quot;,&quot;program_id&quot;:&quot;00a68cd0bda5b35cd2f03e8556cad622f00000904&quot;,&quot;size&quot;:&quot;47568&quot;,&quot;publisher&quot;:&quot;microsoft corporation&quot;,&quot;usn&quot;:&quot;4010568800&quot;,&quot;sha1&quot;:&quot;&quot;,&quot;reg_path&quot;:&quot;{11517B7C-E79D-4e20-961B-75A811715ADD}\\Root\\InventoryApplicationFile\\1394kdbg.sys|7e05880d5bf9d27b&quot;}}
+...
+{&quot;metadata&quot;:{&quot;endpoint_id&quot;:&quot;6c51b123-1522-4572-9f2a-0bd5abd81b82&quot;,&quot;id&quot;:1,&quot;artifact_name&quot;:&quot;amcache&quot;,&quot;complete_time&quot;:1680467122,&quot;start_time&quot;:1680467120,&quot;hostname&quot;:&quot;DESKTOP-UQQDFT8&quot;,&quot;os_version&quot;:&quot;11 (22000)&quot;,&quot;platform&quot;:&quot;Windows&quot;,&quot;kernel_version&quot;:&quot;22000&quot;,&quot;load_performance&quot;:{&quot;avg_one_min&quot;:0.0,&quot;avg_five_min&quot;:0.0,&quot;avg_fifteen_min&quot;:0.0},&quot;uuid&quot;:&quot;bce5fccc-9f13-40cd-bebd-95a32ead119a&quot;},&quot;data&quot;:{&quot;first_execution&quot;:1641252542,&quot;path&quot;:&quot;c:\\program files\\git\\mingw64\\bin\\ziptool.exe&quot;,&quot;name&quot;:&quot;ziptool.exe&quot;,&quot;original_name&quot;:&quot;&quot;,&quot;version&quot;:&quot;&quot;,&quot;binary_type&quot;:&quot;pe64_amd64&quot;,&quot;product_version&quot;:&quot;&quot;,&quot;product_name&quot;:&quot;&quot;,&quot;language&quot;:&quot;&quot;,&quot;file_id&quot;:&quot;&quot;,&quot;link_date&quot;:&quot;01/01/1970 00:00:00&quot;,&quot;path_hash&quot;:&quot;ziptool.exe|7269435f129e6e01&quot;,&quot;program_id&quot;:&quot;01286cf3cc5f1d161abf355f10fee583c0000ffff&quot;,&quot;size&quot;:&quot;162258&quot;,&quot;publisher&quot;:&quot;&quot;,&quot;usn&quot;:&quot;3869400664&quot;,&quot;sha1&quot;:&quot;&quot;,&quot;reg_path&quot;:&quot;{11517B7C-E79D-4e20-961B-75A811715ADD}\\Root\\InventoryApplicationFile\\ziptool.exe|7269435f129e6e01&quot;}}
+{&quot;metadata&quot;:{&quot;endpoint_id&quot;:&quot;6c51b123-1522-4572-9f2a-0bd5abd81b82&quot;,&quot;id&quot;:1,&quot;artifact_name&quot;:&quot;amcache&quot;,&quot;complete_time&quot;:1680467122,&quot;start_time&quot;:1680467120,&quot;hostname&quot;:&quot;DESKTOP-UQQDFT8&quot;,&quot;os_version&quot;:&quot;11 (22000)&quot;,&quot;platform&quot;:&quot;Windows&quot;,&quot;kernel_version&quot;:&quot;22000&quot;,&quot;load_performance&quot;:{&quot;avg_one_min&quot;:0.0,&quot;avg_five_min&quot;:0.0,&quot;avg_fifteen_min&quot;:0.0},&quot;uuid&quot;:&quot;8437907f-53a4-43a2-8ff4-22acb3d06d72&quot;},&quot;data&quot;:{&quot;first_execution&quot;:1641252542,&quot;path&quot;:&quot;c:\\program files\\git\\usr\\bin\\[.exe&quot;,&quot;name&quot;:&quot;[.exe&quot;,&quot;original_name&quot;:&quot;&quot;,&quot;version&quot;:&quot;&quot;,&quot;binary_type&quot;:&quot;pe64_amd64&quot;,&quot;product_version&quot;:&quot;&quot;,&quot;product_name&quot;:&quot;&quot;,&quot;language&quot;:&quot;&quot;,&quot;file_id&quot;:&quot;&quot;,&quot;link_date&quot;:&quot;01/01/1970 00:00:00&quot;,&quot;path_hash&quot;:&quot;[.exe|b6eac39997c90239&quot;,&quot;program_id&quot;:&quot;01286cf3cc5f1d161abf355f10fee583c0000ffff&quot;,&quot;size&quot;:&quot;68322&quot;,&quot;publisher&quot;:&quot;&quot;,&quot;usn&quot;:&quot;3870610520&quot;,&quot;sha1&quot;:&quot;&quot;,&quot;reg_path&quot;:&quot;{11517B7C-E79D-4e20-961B-75A811715ADD}\\Root\\InventoryApplicationFile\\[.exe|b6eac39997c90239&quot;}}
+</code></pre>
+<p>The <code>jsonl</code> output is identical to <code>json</code> with the following differences:</p>
+<ul>
+<li>The values in <code>data</code> are split into separate lines instead of an array</li>
+<li>The <code>uuid</code> is unique for each <code>json</code> line</li>
+</ul>
+<p>This data would be saved in a <code>&lt;uuid&gt;.jsonl</code> file</p>
+<p>The <code>&lt;uuid&gt;.log</code> output from a collection contains any errors or warnings
+encountered during the collection. </p>
+<p>The <code>status.log</code> output from a collection maps the <code>&lt;uuuid&gt;.{json or jsonl}</code> to
+an artifact name. A possible example from the macOS <code>UnifiedLogs</code></p>
+<pre><code>unifiedlogs:d45221df-349b-4467-b726-a9446865b259.json
+unifiedlogs:eccd7b5b-4941-4134-a790-b073eb992188.json
+</code></pre>
+<p>As mentioned and seen above you can also check the actual
+<code>&lt;uuid&gt;.{json or jsonl}</code> files to find the <code>artifact_name</code></p>
+<h1 id="compression"><a class="header" href="#compression">Compression</a></h1>
+<p>If you choose to enable compression for the output <code>artemis</code> will compress each
+<code>&lt;uuid&gt;.{json or jsonl}</code> using <code>gzip</code> compression. The files will be saved as
+<code>&lt;uuid&gt;.{json or jsonl}.gz</code>. The log files are not compressed.</p>
+<p>Once the collection is complete <code>artemis</code> will compress the whole output
+directory into a <code>zip</code> file and remove the output directory. Leaving only the
+<code>zip</code> file.</p>
+<p>Since <code>artemis</code> is running using elevated privileges it uses a cautious approach
+to deleting its data:</p>
+<ul>
+<li>It gets a list of files in its output directory and deletes files one at a
+time that end in: json, jsonl, gz, or log</li>
+<li>Once all output files are deleted, it will delete the empty directory.</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../collections/format.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../collections/uploads.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../collections/format.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../collections/uploads.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>
